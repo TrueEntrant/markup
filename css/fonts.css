@@ -1,0 +1,32 @@
+@font-face {
+			font-family: "PTSerifRegular";
+			src: url("../fonts/PTSerifRegular/PTSerifRegular.eot");
+			src: url("../fonts/PTSerifRegular/PTSerifRegular.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/PTSerifRegular/PTSerifRegular.woff") format("woff"),
+			url("../fonts/PTSerifRegular/PTSerifRegular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+@font-face {
+			font-family: "PTSerifBold";
+			src: url("../fonts/PTSerifBold/PTSerifBold.eot");
+			src: url("../fonts/PTSerifBold/PTSerifBold.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/PTSerifBold/PTSerifBold.woff") format("woff"),
+			url("../fonts/PTSerifBold/PTSerifBold.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+@font-face {
+			font-family: "PTDinTextCondProBold";
+			src: url("../fonts/");
+			src: url("../fonts/pfdintextcondpro-bold.ttf")format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+@font-face {
+			font-family: "PTDinTextCondProRegular";
+			src: url("../fonts/");
+			src: url("../fonts/pfdintextcondpro-regular.ttf")format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
