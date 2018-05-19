@@ -1,4 +1,30 @@
 @import url("fonts.css");
+.outside, .inside, .contain {
+	border: 1px solid #FFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.outside {
+	transform: rotate(45deg);
+	width: 100%;
+	height: 100%;
+}
+.inside {
+	align-self: center;
+	width: 95%;
+	height: 95%;
+}
+.contain {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 0;
+	color: #FFF;
+	transform: rotate(675deg);
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -124,7 +150,7 @@ header {
 	left: 18.85%;
 	line-height: 2.7;
 }
-.slider .slider_text .looks {
+.slider .slider_text a {
   font-size: 12px;
   font-family: "PTSerifBold";
   color: rgb(55, 61, 61);
@@ -136,8 +162,8 @@ header {
 .slider .model {
 	float: right;
 	position: relative;
-	right: 11%;
-	bottom: 25px;
+	right: 8.63%;
+	bottom: 21px;
 }
 .slider .arrow_right, .arrow_left {
 	content: "";
@@ -155,19 +181,22 @@ header {
 	background: url(../img/arrow_r.png);
 	right: 1%;
 }
-
-
-
-
+.designer .inside {
+	position: relative;
+}
 .designer .contain {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	height: 80%;
-
+	position: relative;
+	bottom: 5.5px;
+	right: 4.5px;
 }
-.designer {
+.look {
 	padding-top: 31.5px;
+	max-width: 640px;
+	margin-left: 70px;
 	
 }
 .designer .size {
@@ -177,8 +206,47 @@ header {
 	position: relative;
 	left : 5.88%;
 }
+.item1 .size,
+.item2 .size,
+.item3 .size,
+.item4 .size {
+	width: 70px;
+	height: 70px;
+}
+.look {
+	display: flex;
+	flex-direction: row;
 
-
+}
+.items {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+.items .outside {
+	border-color: #FFF;
+	background-color: #FFF;
+}
+.items .inside {
+	border-color: #a7b3b3;
+	background-color: #FFF;
+}
+.items .contain {
+  color: #a7b3b3;
+  font-size: 14px;
+  font-family: "PTDinTextCondProRegular";
+  color: rgb(167, 179, 179);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.7;
+}
+.items .contain .up {
+	width: 100%;
+	border-bottom: 1px solid #a7b3b3;
+}
 
 
 
