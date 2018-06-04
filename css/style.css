@@ -56,9 +56,8 @@ header .top_line {
 	z-index: 1;
 	width: 100%;
 }
-header .wrap {
+.wrap {
 	max-width: 1275px;
-
 	margin-left: 43px;
 	margin-right: 42px;
 }
@@ -71,7 +70,7 @@ header .fiction {
 	min-width: 255px;
 	background: url(../img/logo.jpg);
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 }
 .menu {
 	margin-left: 255px;
@@ -331,35 +330,149 @@ header .fiction {
 .slider .slick-track {
 	background: #a7b3b3;
 }
-/* ::after {
-	content: "";
-	height: 1000px;
-	background: url(../img/guy.png);
-	position: absolute;
-	z-index: 10001;
-	width: 1000px;
-} */
-
 /*-------section------------*/
 section {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	max-width: 1360px;
+	justify-content: space-around;
+	padding: 0 42px 0 43px;
+	width: 100%;
 }
 .new_trip {
 	background-color: #bababa;
 	max-width: 425px;
 	max-height: 425px;
-	
-}
-.new_trip .size {
-	padding: 81.19px;
-	width: 425px;
+	width: 33.31%;
 	height: 425px;
 }
+.new_trip .size {
+	padding: 81.19px ;
+	width: 100%;
+	height: 100%;
+}
+.new_trip .outside {
+	border: 2px solid #FFF;
+}
+.new_trip .contain{
+	position: relative;
+}
+.new_trip .contain a {
+	position: relative;
+	top: 15px;
+	left: 3.5px;
+	z-index: 1;
+	width: 100%;
+	text-decoration: none;
+}
+.new_trip .contain img {
+	position: absolute;
+	top: 60%;
+	left: 49%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+}
+.new_trip .contain h2 {
+	font-size: 13px;
+	font-family: "PTSerifRegular";
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.358;
+	text-align: center;
+	text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+	margin: 0 auto;	 
+	margin-bottom: 28px; 
+}
+.new_trip .contain p {
+	font-size: 14px;
+	font-family: "PTDinTextCondProRegular";
+	color: rgb(255, 255, 255);
+	line-height: 1.286;
+	text-align: center;
+	text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7); 
+	margin-bottom: 42px;	 
+}
+.new_trip .contain .link {
+	font-size: 14px;
+	font-family: "PTSerifRegular";
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	text-decoration: underline;
+	text-transform: uppercase;
+	line-height: 1.571;
+	text-align: center;
+	text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+	margin-bottom: 0;
+}
+
 .stylist {
 	background-color: #f6f3ec;
 	max-width: 850px;
+	width: 66.69%;
+}
+.stylist .slide {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+}
+.stylist .slide .foto {
+	padding-left: 3.8%;
+	padding-right: 3.8%;
+}
+.stylist .slide .desc {
+	position: relative;
+}
+.stylist .slide .desc h2 {
+	font-size: 14px;
+	font-family: "PTSerifRegular";
+	color: rgb(77, 77, 77);
+	font-weight: bold;
+	text-transform: uppercase;
+	max-width: 200px;
+	text-align: center; 
+	margin-top: 45px;
+	margin-bottom: 62px; 
+}
+.stylist .slide .desc h3 {
+	font-size: 24px;
+	font-family: "PTSerifRegular";
+	color: rgb(77, 77, 77);
+	text-transform: uppercase;
+	line-height: 0.917;
+	letter-spacing: 4px;	
+	text-align: center;
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-ms-transform:rotate(90deg);
+	position: absolute;
+	bottom: 155px;
+	left: -93px;	  
+}
+.stylist .slide .desc .transp {
+	font-size: 14px;
+	font-family: "PFDinTextCondProRegular";
+	color: rgba(77, 77, 77, 0.4);
+	max-width: 225px;
+}
+.stylist .slide .desc p {
+	font-size: 14px;
+	font-family: "PTDinTextCondProRegular";
+	color: rgb(77, 77, 77);
+	width: 225px;
+	/* width: 100%;	 */
+}
+.stylist .slide .desc a{
+	font-size: 12px;
+	font-family: "PTSerifRegular";
+	color: rgb(77, 77, 77);
+	font-weight: bold;
+	text-decoration: underline;
+	text-transform: uppercase;	  
+}
+.stylist .slide .desc .text{
+	margin-left: 50px;
 }
 .player {
 
@@ -438,10 +551,11 @@ section {
 	}
 
   }
-  @media only screen and (max-width:800px) and (min-width:320px){
+  @media only screen and (max-width:900px) and (min-width:320px){
 	header .logo {
 		left: 50%;
 		transform: translate(-50%, 0);
+		z-index: 1;
 	}
 	.slider .model{
 		padding: 82px 0 0 0;
