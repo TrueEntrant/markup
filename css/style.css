@@ -371,15 +371,17 @@ header .fiction {
 section {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	max-width: 1360px;
 	justify-content: space-around;
 	padding: 0 42px 0 43px;
 	width: 100%;
 }
+/*---------- New Trip ----------------*/
 .new_trip {
 	background-color: #bababa;
 	max-width: 425px;
-	width: 42%;
+	width: 33.3334%;
 }
 .new_trip .size {
 	position: relative;
@@ -443,12 +445,12 @@ section {
 	text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
 	margin-bottom: 0;
 }
-/* Stilist section */
+/*----------- Stilist section------------------ */
 .stylist {
 	background-color: #f6f3ec;
 	max-width: 850px;
 	min-width: 700px;
-	width: 66.66%;
+	width: 66.6667%;
 	max-height: 425px;
 }
 .slide .box{
@@ -459,7 +461,6 @@ section {
 }
 .stylist .slide {
 	z-index: 1;
-
 }
 .stylist .slide .desc {
 	min-width: 275px;
@@ -522,12 +523,12 @@ section {
 .stylist .slide .desc .text{
 	margin-left: 50px;
 }
-/* Player settings */
+/* ----------------Player settings----------------- */
 .player {
 	background-color: #000;
 	height: 475px;
 	max-width: 850px;
-	width: 100%;
+	width: 66.6667%;
 }
 .vjs_video_3-dimensions {
 	max-width: 850px;
@@ -536,19 +537,19 @@ section {
 	height:475px;
 }
 .video-js .vjs-big-play-button {
-	top: 56.7%;
+	top: 57.7%;
     left: 50%;
     border-radius: 0;
     transform: translate(-54%, -50%) rotate(45deg);
-    width: 159.5px;
-    height: 161px;
+    width: 188px;
+    height: 188px;
 }
 .video-js .vjs-big-play-button .vjs-icon-placeholder:before {  
     content: "";
     background: url(../img/play_but.png) no-repeat;
     transform: rotate(-45deg);
-    background-position-y: 47.5px;
-    background-position-x: 62px;
+    background-position-y: 59px;
+    background-position-x: 75px;
 }
 .video-js .vjs-big-play-button {
 	background: url(../img/play_back.jpg);
@@ -560,7 +561,7 @@ section {
 .vjs-control-bar {
 	background-color: rgba(0, 0, 0, .1);
 }
-/* refund calculator */
+/*----------- refund calculator--------------- */
 .calculator {
 	background-color: #d1d0d1;
 	max-width: 425px;
@@ -569,18 +570,19 @@ section {
 	flex-direction: row;
 	justify-content: space-around;
 	min-height: 475px;
+	width: 33.3334%;
 }
 .calculator h4 {
-		font-size: 14px;
-		font-family: "PTSerifRegular";
-		color: rgb(40, 40, 40);
-		font-weight: bold;
-		text-transform: uppercase;
-		line-height: 1.358;
-		text-align: center;
-		-moz-transform: scale(1, 1.1);
-		-webkit-transform: scale(1, 1.1);
-		-ms-transform: scale(1, 1.1);  
+	font-size: 14px;
+	font-family: "PTSerifRegular";
+	color: rgb(40, 40, 40);
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.358;
+	text-align: center;
+	-moz-transform: scale(1, 1.1);
+	-webkit-transform: scale(1, 1.1);
+	-ms-transform: scale(1, 1.1);  
 }
 .form_head {
 	padding-top: 20px;
@@ -672,7 +674,7 @@ form button{
 .calculator .slide {
 	min-height: 197px;
 }
-.calculator {}
+
 
 
 
@@ -684,12 +686,10 @@ form button{
 
 
 @media screen and (max-width:1210px) {
-	section {
-		flex-wrap: wrap;
-	}
 	section .new_trip {
 		width: 50%;
-		height: 425px;
+		max-width: 562.5px;
+		height: 475px;
 	}
 	section .stylist {
 		max-width: 1275px;
@@ -700,6 +700,20 @@ form button{
 	}
 	section .stylist .slide .box .desc {
 		margin-left: 0;
+	}
+	.player {
+		justify-content: center;
+		display: flex;
+		max-width: 1125px;
+		width: 100%;
+	}
+	.vjs_video_3-dimensions {
+		max-width: 1125px;
+	}
+	.calculator {
+		order: -1;
+		width: 50%;
+		max-width: 562.5px;
 	}
 	
 }
@@ -734,10 +748,11 @@ form button{
 		transform: translate(-50%, 0);
 	}
   }
-  @media screen and (max-width:900px){
+@media screen and (max-width:900px){
 	.hiden_menu, .chat, .search {
 		position: fixed;
 		right: 0;
+		z-index: 1;
 	}
 	.wayUp {
 		display: inline;
@@ -789,22 +804,74 @@ form button{
 	  }
 
   }
-  @media screen and (max-width:815px){
+@media screen and (max-width:850px) {
 	  section .new_trip {
 		  width: 100%;
 		  max-width: 100%;
 	  }
-	  /* section .stylist .slide .box {
-		max-width: 100%;
-		min-height: 380px;
+	  .calculator {
+		  order: 0;
+		  width: 100%;
+		  max-width: 765px;
 	  }
-	  section .stylist .slide .box .foto {
-		  height: 380px;
-	  } */
-  }
-  @media screen and (max-width:500px){
-	  .copy {
+}
+@media screen and (max-width:785px) {
+	section .stylist {
+		max-height: 100vh;
+		min-width: 50px;
+	}
+	section .stylist .foto {
+		width: 20%;
+	}
+	section .stylist .slide .desc {
+		margin-bottom: 20px;
+	}
+	section .stylist .slide .desc h2{
+		margin-top: 20px;
+	}	
+	section .stylist .slide .box{
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+@media screen and (max-width:620px) {
+	.slider .slide .model {
+		position: absolute;
+	}	
+	.slide .slider_text {
+		top: 180px;
+	}
+	.slider .slide {
+		height: 101vh;
+	}
+	.slide .look {
+		position: relative;
+		flex-direction: column;
+		bottom: 0px;
+		height: 400px;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.designer .size{
+		left: 0;
+	}
+}
+@media screen and (max-width:500px) {
+	.slider .slide .model {
+		top: 82px;
+		padding: 0;
+		max-height: 50vh;
+	}
+	.slide {
+		overflow: hidden;
+	}
+	.copy {
 		  display: none;
 	  }
+	  section .stylist .foto {
+		width: 31.5%;
+	}
   }
   
