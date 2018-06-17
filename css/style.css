@@ -1,4 +1,6 @@
 @import url("fonts.css");
+
+
 .outside, .inside, .contain {
 	border: 1px solid #FFF;
 	display: flex;
@@ -93,7 +95,11 @@ header .fiction {
 	list-style: none;
 	display: flex;
 	justify-content: space-around;
-	padding: 22px 0;
+	align-items: center;
+}
+.menu ul li {
+	height: 100%;
+	line-height: 62px;
 }
 .menu ul li a {
   font-size: 11px;
@@ -103,6 +109,9 @@ header .fiction {
   line-height: 0.273;
   text-align: center;
   text-decoration: none;
+}
+.menu ul li a:hover {
+	text-decoration: underline;
 }
 .wayUp {
 	position: fixed;
@@ -120,7 +129,7 @@ header .fiction {
 	text-align: center;
 	color: #808080;
 }
-.search, .hiden_menu, .chat {
+.searchb, .hiden_menu, .chat {
 	content: "";
 	height: 62px;
 	width: 42px;
@@ -133,7 +142,7 @@ header .fiction {
 	float: right;
 	cursor: pointer;
 }
-.search {
+.searchb {
 	background: url(../img/search.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -282,7 +291,7 @@ header .fiction {
 /* --------------Slick slider --------------------*/
 .slider .slide {
 	min-height: 460px;
-	z-index: 1001;
+	z-index: 3;
 }
 .slider .slick-prev::before, .slider .slick-next::before{
 	font-family:"Arial";
@@ -292,7 +301,7 @@ header .fiction {
 	content: "";
 	width: 10px;
 	height: 10px;
-	z-index: 100001;
+	z-index: 4;
 }
 .slider .slick-prev{
 	left: 14px;	
@@ -652,24 +661,36 @@ section {
 }
 .hover_area {
 	position: absolute;
-	bottom: -42px;
-	height: 235px;
+	bottom: -46px;
+	height: 240px;
 	width: 100%;
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	align-items: center;
 }
-.hover_area span {
-	display: inline-block;
-	padding: 11px;
+.hover_area .cont {
+	background: rgba(255, 255, 255, 0.4);
 	width: 100%;
-	text-align: center;
-	background: rgba(0, 0, 0, .1);
-	bottom: 0;
+	max-height: 47px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 }
-.hover_area:hover,
-.hover_area span:hover {
+.hover_area .cont p{
+	font-size: 14px;
+	font-family: "PTDinTextCondProRegular";
+	color: rgb(40, 40, 40);
+	line-height: 1.571;
+	text-align: center;
+}
+.hover_area .cont:nth-child(1) {
+	padding: 5px 0;
+}
+.hover_area:hover {
 	max-height: 195px;
 	margin: 0;
 	bottom: 0px;
@@ -697,6 +718,7 @@ aside {
 }
 aside .wrap {
 	margin: 0;
+	justify-content: space-around;
 	justify-content: space-evenly;
 	display: flex;
 	flex-wrap: wrap;
@@ -759,6 +781,7 @@ aside .partners .chosing::before {
 	position: absolute;
 	left: 45px;
 	bottom: 0;
+	cursor: pointer;
 }
 aside .partners .chosing::after {
 	content: "";
@@ -768,6 +791,7 @@ aside .partners .chosing::after {
 	position: absolute;
 	right: 45px;
 	bottom: 0;
+	cursor: pointer;
 }
 /* ----------shop-------------- */
 aside .shop {
@@ -782,6 +806,21 @@ aside .shop {
 	flex-wrap: wrap;
 	align-items: center
 }
+aside .shop .brown,
+aside .shop .blue,
+aside .shop .grey {
+	position: absolute;
+	left: 10px;
+	bottom: 12px;
+	cursor: pointer;
+}
+aside .shop .brown {
+	bottom: 42px;
+}
+aside .shop .grey {
+	bottom: 72px;
+}
+
 aside .shop .price,
 aside .shop .name,
 aside .shop .action {
@@ -926,6 +965,7 @@ footer .label {
 	background: #d4dde4;
 	max-height: 140px;
 	line-height: 140px;
+	background-color: br
 }
 
 
