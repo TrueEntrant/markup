@@ -106,7 +106,7 @@ header .fiction {
 	z-index: 5;
 }
 .nav {
-	max-width: 900px;
+	max-width: 635px;
 	width: 100%;
 	position: relative;
 	z-index: 5;
@@ -1015,11 +1015,7 @@ footer .label {
 	background-color: br
 }
 /* search hightlights */
-span.highlight {
-	background-color: #C6D9DB; cursor: pointer; }
-	
-	span.splink {
-	color: #0A5794; cursor: pointer; }
+
 
 
 
