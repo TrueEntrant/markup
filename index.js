@@ -72,9 +72,8 @@ $(".shop").hover(function(ev){
     else 
         ev.currentTarget.querySelector(".action").setAttribute("class", "action visible");
 
-
 });
-
+// shirt change color
 var item = document.querySelector(".shirt");
 
 function isOnTarget (evn, target) {
