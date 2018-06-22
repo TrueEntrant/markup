@@ -16,12 +16,10 @@ $(".hiden_menu").click(function(){
         $(".active").fadeIn(500);
         $(".active")[0].style.display = "flex";
     } else if($(".active")[0].style.display == "") {
-        // $(".menu").toggleClass("active");
         $(".chat_win").fadeOut(500);
         $(".search").fadeOut(500);
         $(".active").fadeIn(500);
     } else if($(".active")[0].style.display == "none") {
-        // $(".menu").toggleClass("active");
         $(".chat_win").fadeOut(500);
         $(".search").fadeOut(500);
         $(".active").fadeIn(500);
@@ -33,6 +31,8 @@ $(".chat").click(function(){
         $(".search").fadeOut(500);
         if($(document).width() < 900) {
             $(".active").fadeOut(400);
+        } else if($(document).width() > 900) {
+            $(".active").fadeIn(400);
         }
         $(".chat_win").fadeIn(500);
     } else
