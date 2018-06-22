@@ -259,6 +259,8 @@
 	.slider .slide .model {
 		top: 82px;
 		padding: 0;
+		max-height: 40vh;
+		width: 100%;
     }
     section .new_trip {
     	overflow: hidden;
@@ -269,5 +271,13 @@
 	section .stylist .foto {
 		width: 31.5%;
 	}
-  }
+	.hover_area {
+		display: none;
+	}
+	.slider,
+	.slider .slide, 
+	.slider .slide .box {
+		max-height: 800px;
+	}
+}
   

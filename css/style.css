@@ -55,7 +55,7 @@ h1 {
 	width: 100%;
 }
 body {
-	min-width: 500px;
+	min-width: 425px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
