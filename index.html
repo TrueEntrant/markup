@@ -8,10 +8,14 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
 	<!-- loader css -->
 	<link rel="stylesheet" href="css/popups.css">
+	<script src="script/loader.js" async></script>
 
+	<!-- slick styles -->
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<!-- vJS styles  -->
 	<link rel="stylesheet" type="text/css" href="css/video-js.css">
+	<!-- my styles -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 	
@@ -30,34 +34,45 @@
 			</div>
 		</div>
 
-		<div class="search">
-			<input type="search" placeholder="Search...">
-			<button type="submit"></button>
+		<div class="search" style="display: none;">
+			<input type="text" placeholder="Search..." value="" class="srch_field">
+			<button type="submit" class="srch" title="Start searching">
+				<img src="img/white_seapch.png" alt="search">
+			</button>
+			<div class="attention">Sorry, searching is unavialable!</div>
+		</div>
+
+		<div class="chat_win" style="display: none;">
+			<h3>Contact with our manager!</h3>
+			<div class="window"> </div>
+			<input type="text" class="field" placeholder="Type here...">
+			<button type="submit" class="send" title="Send a massage">Send</button>
+
+			<div class="warning">Sorry... the chat is currently offline! </div>
 		</div>
 	</section>
 
-  <script src="script/loader.js" async></script>
 
   <header>
 
-  	<a href="#" class="logo"> </a>
+  	<a href="#top" class="logo" title="A TaxFree Shoping company"> </a>
 
-	<div class="top_line" name="top">
+	<div class="top_line" id="top">
 
 	  
-	  	<div class="hiden_menu"> </div>
-	  	<div class="searchb"></div>
+	  	<div class="hiden_menu" title="Menu"> </div>
+	  	<div class="searchb" title="Searching"></div>
 
 	  <div class="menu">
 		<div class="nav">
 		  <ul>
-			<li><a href="#">my taxfree</a></li>
-			<li><a href="#">new trip</a></li>
-			<li><a href="#">get taxfree card</a></li>
-			<li><a href="#">shopping</a></li>
-			<li><a href="#">stylist</a></li>
-			<li><a href="#">blog</a></li>
-			<li><a href="#">about</a></li>
+			<li><a class="anchor" href="#calculator" title="Go to taxfree">my taxfree</a></li>
+			<li><a class="anchor" href="#new_trip" title="Go to new trip">new trip</a></li>
+			<li><a class="anchor" href="#partners" title="Go to new card">get taxfree card</a></li>
+			<li><a class="anchor" href="#shop" title="Go to shop">shopping</a></li>
+			<li><a class="anchor" href="#stylist" title="Go to recomended stylist">stylist</a></li>
+			<li><a class="anchor" href="#top" title="Go to our blog">blog</a></li>
+			<li><a class="anchor" href="#footer" title="Go to about us">about</a></li>
 		  </ul>
 		</div>
 	  </div>
@@ -67,9 +82,9 @@
 	<div class="fiction">
 	</div>
 
-	<a href="#" class="chat"> </a>
+	<div class="chat" title="Start a chat"> </div>
 
-	<a href="#top" class="wayUp">
+	<a href="#top" class="wayUp anchor" title="Your way up =)">
 			<img src="img/up.png" alt="UP" class="arrow_up">
 			<p class="way">UP</p>
 	</a>
@@ -82,15 +97,15 @@
 					<img src="img/guy.png" alt="model guy">
 				</div>
 				<div class="slider_text">
-					<h1>
+					<h2>
 						Thank you, john for using our taxfree4u service!
-					</h1>
+					</h2>
 
 					<img src="img/divider.png" alt="divider">
 
 					<p>Here's some items you might like</p>
 
-					<a href="#" >see all my looks</a>
+					<a href="#empty" >see all my looks</a>
 				</div>
 				<div class="look">
 					<div class="designer">	
@@ -182,15 +197,15 @@
 						<img src="img/guy.png" alt="model guy">
 					</div>
 					<div class="slider_text">
-					<h1>
+					<h2>
 						Thank you, john for using our taxfree4u service!
-					</h1>
+					</h2>
 		
 					<img src="img/divider.png" alt="divider">
 		
 					<p>Here's some items you might like</p>
 		
-					<a href="#" >see all my looks</a>
+					<a href="#empty" >see all my looks</a>
 					</div>
 					<div class="look">
 						<div class="designer">	
@@ -285,15 +300,15 @@
 	</header>
 
 
-	<section>
-		<div class="new_trip">	
+	<section class="main_sec">
+		<div class="new_trip" id="new_trip">	
 			<div class="size">
 			  	<div class="outside">
 					  <div class="contain">
 						<img src="img/boxes.png" alt="boxes">
-						<a href="#">
-							<h2>going to a new trip? </br> click here to get your refund</h2>
-							<p>With TaxFree4U you can get up to 18% <br> refund from shoping in EU</p>
+						<a href="#empty">
+							<h2>going to a new trip? <br /> click here to get your refund</h2>
+							<p>With TaxFree4U you can get up to 18% <br /> refund from shoping in EU</p>
 							<p class="link">start new trip</p>
 						</a>
 					  </div>
@@ -301,20 +316,20 @@
 				  </div>
 		</div>
 			 
-		<div class="stylist">
+		<div class="stylist" id="stylist">
 			<div class="slide">
 
 			<div class="box">
-				<img class="foto" src="img/Lindsay 2.jpg" alt="stylist">
+				<img class="foto" src="img/lindsay_2.jpg" alt="stylist">
 				<div class="desc">
 					<h2>
-						recommended stylists </br>
+						recommended stylists <br />
 						<img class="divid" src="img/divider_black.png" alt="divider">						
 					</h2>
 					<h3>lindsay pearce</h3>
 					<div class="text">
 						<p class="transp">
-							Stylist <br> Bloger 
+							Stylist <br /> Bloger 
 							<img src="img/star_white.png" alt="whiteStars">
 						</p>
 						<p>
@@ -324,22 +339,22 @@
 							not only five centuries, but also the leap into electronic typesetting,
 							remaining essentially unchanged. It was popularised in the 1960s
 						</p>
-						<a href="#">contact with lindsay</a>
+						<a href="#empty">contact with lindsay</a>
 					</div>
 					</div>
 			</div>
 			</div>
 			<div class="slide copy">
 				<div class="box">
-				<img class="foto" src="img/Lindsay 2.jpg" alt="stylist">
+				<img class="foto" src="img/lindsay_2.jpg" alt="stylist">
 				<div class="desc">
 						<h2>
-								recommended stylists </br>
+								recommended stylists <br />
 								<img class="divid" src="img/divider_black.png" alt="divider">						
 							</h2>
 					<h3>lindsay pearce</h3><div class="text">
 							<p class="transp">
-								Stylist <br> Bloger 
+								Stylist <br /> Bloger 
 								<img src="img/star_white.png" alt="whiteStars">
 							</p>
 							<p>
@@ -349,7 +364,7 @@
 								not only five centuries, but also the leap into electronic typesetting,
 								remaining essentially unchanged. It was popularised in the 1960s
 							</p>
-							<a href="#">contact with lindsay</a>
+							<a href="#empty">contact with lindsay</a>
 						</div>
 				</div>
 				</div>
@@ -357,26 +372,28 @@
 		</div>
 
 		<div class="player">
-			<video poster="img/player.jpg" class="video-js vjs-controls-enabled" controls data-setup="{}">
+			<h1>get the best opotunities from shopping: fashion looks,<br />personal stylist
+			assistance and tax free refund in one!</h1>
+			<video poster="img/player.png" class="video-js vjs-controls-enabled" controls data-setup="{}">
 				<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
 			</video>
 		</div>
 
-		<div class="calculator">
+		<div class="calculator" id="calculator">
 			
-			<form action="#">
+			<form action="#empty">
 				<div class="form_head">
 					<h4>refund calculator</h4>
 					<img src="img/divider_black.png" alt="divider" class="divd">
 				</div>
-				<select name="country" id="country" required>
-					<option value="Select country" selected>Select country</option>
+				<select name="country" id="country"  size="1" required>
+					<option id="selected" value=""  selected>Select country</option>
 					<option value="France">France</option>
 					<option value="Italia">Italia</option>
 					<option value="Germany">Germany</option>
 				</select>
 				<input type="text" placeholder=" Type purchase" required>
-				<button type="submit">start new trip</button>
+				<button type="submit" title="Calculate a new trip">start new trip</button>
 			</form>
 
 			<div class="latest">
@@ -431,17 +448,16 @@
 			</div>
 		  </div>
 		</div>
-	</section>
+
 	
-	<aside>
 		<div class="wrap">
-			<div class="partners">
+			<div class="partners" id="partners">
 				<h4>product partners</h4>
 				<img class="divider" src="img/divider_black.png" alt="divider">
 				<p class="descr">Lorem Ipsum has been the industry's standart dummy text 
 					ever since the 1500s</p>
-				<form action="#">
-						<button type="submit">Featured</button>
+				<form action="#empty">
+						<button type="submit" title="Send a form">Featured</button>
 					<select name="featured" id="featured">
 						<option value="By city" selected>By city</option>
 						<option value="Berlin">Berlin</option>
@@ -454,26 +470,26 @@
 				</div>
 			</div>
 
-			<div class="shop">
+			<div class="shop" id="shop">
 				<div class="item shirt">
 					<img class="new" src="img/new.png" alt="new">
 					<img class="large" src="img/shirt_blue.png" alt="shirt">
 					<div class="boxes">
-						<img class="blue" src="img/blue_box.png" alt="blue" href="img/shirt_blue.png">
-						<img class="brown" src="img/brown_box.png" alt="brown" href="img/shirt_brown.png">
-						<img class="grey" src="img/grey_box.png" alt="grey" href="img/shirt_grey.png">
+						<img class="blue" title="blue" src="img/blue_box.png" alt="blue" id="img/shirt_blue.png">
+						<img class="brown" title="brown" src="img/brown_box.png" alt="brown" id="img/shirt_brown.png">
+						<img class="grey" title="grey" src="img/grey_box.png" alt="grey" id="img/shirt_grey.png">
 					</div>
 				</div>
 				<div class="price">250$</div>
-				<div class="name">Shirt</div>
+				<div class="name visible">Shirt</div>
 				<div class="action">
-					<a href="#">
+					<a href="#empty" title="Add to favorites">
 						<img src="img/like.png" alt="act">
 					</a>
-					<a href="#">
+					<a href="#empty" title="Add to cart">
 						<img src="img/cart.png" alt="act">
 					</a>
-					<a href="#">
+					<a href="#empty" title="Share">
 						<img src="img/share.png" alt="act">
 					</a>
 				</div>
@@ -485,15 +501,15 @@
 					<img src="img/bag.png" alt="bag">
 				</div>
 				<div class="price">500$</div>
-				<div class="name">Fillson Small Duffell Bag</div>
+				<div class="name visible">Fillson Small Duffell Bag</div>
 				<div class="action">
-					<a href="#">
+					<a href="#empty" title="Add to favorites">
 						<img src="img/like.png" alt="act">
 					</a>
-					<a href="#">
+					<a href="#empty" title="Add to cart">
 						<img src="img/cart.png" alt="act">
 					</a>
-					<a href="#">
+					<a href="#empty" title="Share">
 						<img src="img/share.png" alt="act">
 					</a>
 				</div>
@@ -505,64 +521,69 @@
 					<img src="img/clock.png" alt="clock">
 				</div>
 				<div class="price">2000$</div>
-				<div class="name">Marine Grand Deck 6300-300/GD</div>
+				<div class="name visible">Marine Grand Deck 6300-300/GD</div>
 				<div class="action">
-					<a href="#">
+					<a href="#empty" title="Add to favorites">
 						<img src="img/like.png" alt="act">
 					</a>
-					<a href="#">
+					<a href="#empty" title="Add to cart">
 						<img src="img/cart.png" alt="act">
 					</a>
-					<a href="#">
+					<a href="#empty" title="Share">
 						<img src="img/share.png" alt="act">
 					</a>
 				</div>
 			</div>
 		</div>
-	</aside>
+	
+	</section>
+	
+	
 
-	<footer>
+	<footer id="footer">
 		<div class="label">
 			<img src="img/label.jpg" alt="label">
 		</div>
 		<div class="wrap">
 			<div class="itunes">
 				<img src="img/appstore.png" alt="appstore">
-				<h5><a href="https://www.apple.com/itunes/" target="_blanc"><span>download app in</span> iTunes</a></h5>
+				<h5><a href="https://www.apple.com/itunes/" title="App Store" target="blanc"><span>download app in</span> App Store</a></h5>
 			</div>
 			<div class="navigate">
 				<ul>
-					<li><a href="#">my taxfree</a></li>
-					<li><a href="#">new trip</a></li>
-					<li><a href="#">get taxfree card</a></li>
-					<li><a href="#">shopping</a></li>
-					<li><a href="#">stylist</a></li>
-					<li><a href="#">blog</a></li>
-					<li><a href="#">about</a></li>
+					<li><a class="anchor" href="#calculator" title="Go to taxfree">my taxfree</a></li>
+					<li><a class="anchor" href="#new_trip" title="Go to new trip">new trip</a></li>
+					<li><a class="anchor" href="#partners" title="Go to new card">get taxfree card</a></li>
+					<li><a class="anchor" href="#shop" title="Go to shop">shopping</a></li>
+					<li><a class="anchor" href="#stylist" title="Go to recomended stylist">stylist</a></li>
+					<li><a class="anchor" href="#top" title="Go to our blog">blog</a></li>
+					<li><a class="anchor" href="#footer" title="Go to about us">about</a></li>
 				</ul>
 			</div>
 			<div class="follow">
 				<h4>follow us</h4>
-				<form action="#">
+				<form action="#empty">
 					<input type="text">
-					<button type="submit">Subscribe</button>
+					<button type="submit" title="Subscribe on us">Subscribe</button>
 				</form>
 				<div class="contacts">
-					<a href="https://ru.pinterest.com/" target="_blanc"><img src="img/picassa.png" alt="printerest"></a>
-					<a href="www.facebook.com/" target="_blanc"><img src="img/facebook.png" alt="facebook"></a>
-					<a href="https://twitter.com/?lang=ru" target="_blanc"><img src="img/twitter.png" alt="twitter"></a>
-					<a href="https://www.instagram.com/?hl=ru" target="_blanc"><img src="img/ic_instagram.png" alt="ic_instagram"></a>
+					<a href="https://ru.pinterest.com/" title="Printerest" target="blanc"><img src="img/picassa.png" alt="printerest"></a>
+					<a href="www.facebook.com/" title="Facebook" target="blanc"><img src="img/facebook.png" alt="facebook"></a>
+					<a href="https://twitter.com/?lang=ru" title="Twitter" target="blanc"><img src="img/twitter.png" alt="twitter"></a>
+					<a href="https://www.instagram.com/?hl=ru" title="Instagram" target="blanc"><img src="img/ic_instagram.png" alt="ic_instagram"></a>
 				</div>
 			</div>
 		</div>
 	</footer>
 
-	<!--JQuery loading-->
-	<script src="slick/slick.min.js" ></script>
+	<!--slick js loading-->
+	<script src="slick/slick.min.js" async></script>
 	<!-- Vodeo JS -->
-	<script src="script/video.js"></script>
+	<script src="script/video.js" async></script>
 	<!-- my JS loading -->
 	<script src="index.js" defer></script>
+	<script src="script/mySlick.js" async></script>
+	<script src="script/search.js" async></script>
 	
 </body>
 </html>
